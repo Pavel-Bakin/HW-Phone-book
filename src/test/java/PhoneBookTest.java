@@ -13,7 +13,7 @@ public class PhoneBookTest {
     @Test
     public void testAddContact () {
         int result = phoneBook.add("Петя", "89998887766");
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
     @Test
