@@ -38,4 +38,17 @@ public class PhoneBookTest {
         assertNull(foundName);
     }
 
+    @Test
+    public void testFindByName () {
+        phoneBook.add("Вася", "89225849801");
+        String foundNumber = phoneBook.findByName("Вася");
+        assertEquals("89225849801", foundNumber);
+    }
+
+    @Test
+    public void testFindByNameNotFound () {
+        String foundNumber = phoneBook.findByName("Анна");
+        assertNull(foundNumber);
+    }
+
 }
